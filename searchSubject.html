@@ -1,0 +1,16 @@
+<div class="semcss1">
+    <div class="semcss6">Search Subject</div>
+    <div class="home_3">Search any subject by Subject Name or Subject Code for CE or CS</div>
+    <div class="semsearch"><input type="search" ng-model="searchSubject"
+            placeholder="Enter Subject Code or Subject Name"></div>
+    <div ng-style="{'border-bottom':($last? 'none' : '')}" class="semsrchcss1"  ng-repeat="subs in showData | filter : searchSubject">
+        <div class="semsrchcss2">
+            <p>{{$index + 1}}.</p>
+            <p>Subject Code : {{subs.subCode}}</p>
+        </div>
+        <div class="semsrchcss4">
+            <a href="https://s3-ap-southeast-1.amazonaws.com/gtusitecirculars/Syallbus/{{subs.subCode}}.pdf" target="_blank">Download</a>
+        </div>
+    </div>
+
+</div>
