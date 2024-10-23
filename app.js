@@ -12,6 +12,7 @@ app.controller('indexController', function ($http, $scope) {
       $scope.selectedSemData = null;
       $scope.loader = false;
       document.getElementsByTagName('body')[0].style.overflow = 'auto';
+      $scope.updateYear();
     });
 
   $scope.currentScreen = 'home';
@@ -30,6 +31,13 @@ app.controller('indexController', function ($http, $scope) {
       });
     }
   };
+  $scope.mainYear = 2024;
+  $scope.updateYear = function () {
+    let date = new Date();
+    let year = date.getUTCFullYear();
+    
+    $scope.mainYear = year;
+  }
 });
 
 // ------------- Vanilla JS ---------------
@@ -55,14 +63,14 @@ function toggleAccor() {
 }
 
 let menuStatus = 'close';
-function toggleMenu(){
+function toggleMenu() {
   let menu = document.querySelector('.navbar_5')
 
-  if(menuStatus == 'close'){
+  if (menuStatus == 'close') {
     menu.style.display = 'flex';
     menuStatus = 'open'
   }
-  else{
+  else {
     menu.style.display = 'none';
     menuStatus = 'close'
   }

@@ -257,6 +257,7 @@ body {
   border: 1px solid #cdcdcd;
   width: 50%;
   margin-bottom: 20px;
+  border-radius: 10px;
 }
 
 .semcss3 {
@@ -267,6 +268,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 10px 10px 0 0;
 }
 
 .semcss4 {
@@ -285,6 +287,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border-radius: 0 0 10px 10px;
 }
 
 .semcss6 {
